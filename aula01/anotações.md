@@ -50,7 +50,11 @@ retorna um ponteiro do tipo FILE
 
 `FILE *fopen (char *nome_do_arquivo,char *modo);`
 
-### fclose
+#### desafio do exemplo 01
+
+troca a posição do código para o final, nos parâmetros passados no fopen()
+
+### **fclose**
 
 libera o ponteiro alocado para a abertura do arquivo, sempre deve ser chamado
 
@@ -72,7 +76,7 @@ lê dados formatados de um arquivo
 
 `int fprintf (FILE *fp,char *str,...);`
 
-### desafio do exemplo 02
+#### desafio do exemplo 02
 
 Se o número for par, imprimir "par"
 
@@ -95,5 +99,5 @@ TODO
 
 > dica: usar um vetor, alocação manual
 
-[ ] Acividade 03
-[ ] Acividade 04
+[ ] Atividade 03
+[ ] Atividade 04
