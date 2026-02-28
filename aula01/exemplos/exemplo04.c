@@ -1,24 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-main()
-{
-char caractere; 
+int main() {
+  char caractere; 
+  FILE *txt;
 
-FILE *txt;
-
-if((txt = fopen("c:\\arquivo.txt","r")) == NULL)
-    {
-        printf("Erro ao abrir arquivo");
+  if ((txt = fopen("arquivo.txt","r")) == NULL) {
+    printf("Erro ao abrir arquivo");
+  } else {
+    while (!feof(txt)) {
+      caractere = fgetc(txt);
+      printf("%c", caractere);
     }
- else
-     {
-        while (!feof(txt)) {
-               caractere = fgetc(txt);
-			   printf("%c", caractere);
-               
-              }
-          fclose(txt);
-      }
-system("pause"); 
+
+    fclose(txt);
+  }
+
+  system("pause"); 
 }
