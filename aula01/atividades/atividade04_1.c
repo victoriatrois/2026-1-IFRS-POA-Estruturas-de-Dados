@@ -1,0 +1,1 @@
+// 1) Considerando o Exemplo03.cpp, altere o programa que nodo de leia dez (10) nomes de pessoas e suas respectivas idades e grave em um arquivo chamado lista.txt. 
