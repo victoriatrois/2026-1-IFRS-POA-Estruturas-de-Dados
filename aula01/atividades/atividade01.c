@@ -14,11 +14,11 @@ int main() {
     printf("Erro ao abrir o arquivo");
     return 1;
 
-  } else {
-    while (!feof(cidades)) {
-      fscanf(cidades, "%s %u %s", nomeDaCidade, &populacao, sigla);
-      printf("%s %u %s\n", nomeDaCidade, populacao, sigla);
-    }
-    return 0;
   }
+  while (!feof(cidades)) {
+    fscanf(cidades, "%s %u %s", nomeDaCidade, &populacao, sigla);
+    printf("%s %u %s\n", nomeDaCidade, populacao, sigla);
+  }
+  return 0;
+
 }
