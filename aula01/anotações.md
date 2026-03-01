@@ -93,11 +93,11 @@ Lê o caractere presente na posição atual do fluxo interno. Após a leitura, a
 se tiver um a minúsculo, trocar por um X
 
 TODO
-[ ] revisar os exemplos, anotar os códigos pertinentes
-[ ] Atividade 01
-[ ] Atividade 02
+[x] revisar os exemplos, anotar os códigos pertinentes
+[x] Atividade 01
+[x] Atividade 02
 
 > dica: usar um vetor, alocação manual
 
-[ ] Atividade 03
-[ ] Atividade 04
+[x] Atividade 03
+[x] Atividade 04
