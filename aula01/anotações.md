@@ -248,3 +248,9 @@ int main() {
   return(0);
 }
 ```
+
+TODO
+[ ] Desafio em aula 01
+[ ] Desafio em aula 02 (tá pronto)
+[ ] Atividade 01
+[ ] Atividade 02
