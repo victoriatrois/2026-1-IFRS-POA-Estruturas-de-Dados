@@ -54,7 +54,7 @@ retorna um ponteiro do tipo FILE
 
 troca a posição do código para o final, nos parâmetros passados no fopen()
 
-### **fclose**
+### fclose
 
 libera o ponteiro alocado para a abertura do arquivo, sempre deve ser chamado
 
@@ -101,3 +101,150 @@ TODO
 
 [x] Atividade 03
 [x] Atividade 04
+
+02/03
+
+### fgets
+
+`<adicionar a descrição>`
+
+`int fgetc (FILE * fp);`
+
+### strtok
+
+`<adicionar a descrição>`
+
+`<adicionar a sintaxe>`
+
+> Qual o tamanho indicado? para a linha
+> 4K
+
+> BOA QUESTÃO PARA PROVA
+> como faz um programa que conta quantas vezes uma palavra aparece num texto?
+
+# 02/03 - 02 Tipos de alocação de memória. Representação dos dados. Listas. Pilhas. Filas.
+
+## Tipos de dados
+
+Dados primitivos: tipo de dado vinculado a uma determinada variável.
+
+simples são dados com uma posição de mem
+oria
+
+dados compostos homogêneos são estruturas de vários dados de um mesmo tipo (vetores)
+
+dados compostos heterogêneos: conjuntos de dados formados por tupos de dados primitidos diferentes organizados em uma mesma estrutura
+
+## Resgistros / Structures
+
+Todo vetor é um ponteiro, daí posso atribuir um vetor a um ponteiro.
+Atribuir uma variável a um ponteiro, dará erro, pois a variável armazena o seu endereço e o seu valor.
+
+& é utilizado pra 
+
+Variável tem endereço e dado
+
+## Arquivos Binários
+
+### fwrite
+
+Escrever em arquivos binários
+
+```c
+size_t fwrite(
+  void * dados, 
+  size_t tamanho,
+  size_t numero_de_itens,
+  FILE * arquivo);
+```
+
+### fread
+
+Escrever em arquivos binários
+
+```c
+size_t fwrite(
+  void * dados, 
+  size_t tamanho,
+  size_t numero_de_itens,
+  FILE * arquivo);
+```
+
+
+
+PROVA: ler ordenar e gravar binário
+
+PROVA: qual a vantagem de escrever em arq bin?
+
+mat[5] == p*(mat+5)
+
+
+## Alocação dinâmica
+ Alocação em tempo de execução 
+
+ malloc
+`<adicionar a descrição>`
+
+`<adicionar a sintaxe>`
+ calloc
+ `<adicionar a descrição>`
+
+`<adicionar a sintaxe>`
+
+ realloc
+ `<adicionar a descrição>`
+
+`<adicionar a sintaxe>`
+
+> lento, fazer realocações de bloco 1000 / 10000
+
+free
+
+`<adicionar a descrição>`
+
+`<adicionar a sintaxe>`
+
+> usar o free quando precisar desalocar memória e não finalizar o programa
+
+passar para o caderno:
+```c
+#include <stdlib.h>
+#include <stdio.h>
+  int main() {
+  int n=0;
+  int *pn = &n; 
+  n = 2015;
+  printf("Valor de n: %d \n", n);
+  printf("Endereco de n: %x \n", &n);
+  printf("Conteudo do Ponteiro de n: %d \n", *pn);
+  printf("Ponteiro de n: %x \n", pn);
+}
+```
+
+Questão de prova:
+#include <stdio.h>
+#include <stdlib.h> 
+```c
+int main() { 
+ int *a, *b;
+ a = (int * ) malloc ( sizeof(int) * 100);
+ b = (int * ) malloc ( sizeof(int) * 3 );
+ 
+ for (int i = 0; i< 100; i++) {
+    a[i] = i; 
+  }
+
+  b[0] = 0; 
+  b[1] = 1; 
+  b[2] = 2; 
+
+  printf("valor %d - endereco %p \n", a[0] ,&a[0]); 
+  printf("valor %d - endereco %p \n", a[1], &a[1]); 
+  printf("valor %d - endereco %p \n", a[2], &a[2]); 
+  printf("valor %d - endereco %p \n", b[0], &b[0]); 
+  printf("valor %d - endereco %p \n", b[1], &b[1]); 
+  printf("--> a %d\n", sizeof *a); 
+  system("pause");
+  return(0);
+}
+```
