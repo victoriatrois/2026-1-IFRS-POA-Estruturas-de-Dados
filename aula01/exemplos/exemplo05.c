@@ -11,6 +11,7 @@ main() {
   }
 
   while (!feof(txt)) {
+    // lê 1023 caracteres ou até a quebra de linha
     fgets(linha, 1024, txt);
     printf("%s", linha);
     system("pause");

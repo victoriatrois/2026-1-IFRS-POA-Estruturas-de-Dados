@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct Cpessoa
+typedef struct
 {
 	char nome[20];
 	int idade;
-};
+} Cpessoa;
 
 int main(void)
 {
@@ -21,6 +21,7 @@ int main(void)
   else
 	{
 		//Lendo o Arquivo
+    // carrega em memória
 		while (!feof(bin))
 		{
 			fread(&aluno[tamanho] ,sizeof(Cpessoa),1, bin);
