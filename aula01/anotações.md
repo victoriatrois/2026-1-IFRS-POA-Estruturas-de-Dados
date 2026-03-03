@@ -1,4 +1,6 @@
-# 23/02 - 01 Apresentação. Revisão de Comandos C de Leitura e Escrita em Arquivos
+# Estruturas de Dados - 2026.1
+
+## 23/02 - 01 Apresentação. Revisão de Comandos C de Leitura e Escrita em Arquivos
 
 Em c, um arquivo é um fluxo de bytes.
 
@@ -8,43 +10,43 @@ Um arquivo, nada mais é que uma árvore balanceada.
 
 Existem métodos para percorrer os arquivos e manipulá-los. Para tal, precisamos informar o modo de abertura que queremos utilizar.
 
-## Modos de abertura
+### Modos de abertura
 
-### r
+#### r
 
 abre para leitura; arquivo precisa existir.
 
-### w
+#### w
 
 abre para escrita; cria se não existir e apaga todo conteúdo se existir.
 
-### a (append)
+#### a (append)
 
 abre para escrita no fim; cria se não existir, nunca apaga o que já tinha.
 
 > Em a e a+, mesmo que você mova o cursor com fseek, a escrita continua indo para o final.
 
-### r+
+#### r+
 
 leitura e escrita; arquivo precisa existir; não apaga conteúdo.
 
 > Em r+, você pode sobrescrever bytes no meio do arquivo.
 
-### w+
+#### w+
 
 leitura e escrita; cria se não existir e zera conteúdo se existir.
 
-### a+
+#### a+
 
 leitura e escrita; cria se não existir; escrita é sempre no fim.
 
-### `<modo base>`b
+#### `<modo base>`b
 
 Executa a mesma operação, só que o arquivo é binário. Ex. a+b, wb, r+b/rb+, etc.
 
-## Métodos de manipulação
+### Métodos de manipulação
 
-### fopen
+#### fopen
 
 retorna um ponteiro do tipo FILE
 
@@ -54,33 +56,33 @@ retorna um ponteiro do tipo FILE
 
 troca a posição do código para o final, nos parâmetros passados no fopen()
 
-### fclose
+#### fclose
 
 libera o ponteiro alocado para a abertura do arquivo, sempre deve ser chamado
 
 `int fclose (FILE *fp);`
 
-### feof
+#### feof
 
 informa o fim do arquivo
 
 `int feof (FILE *fp);`
 
-### fscanf
+#### fscanf
 
 lê dados formatados de um arquivo
 
 `int fscanf (FILE *fp,char *str,variavél);`
 
-### fprintf
+#### fprintf
 
 `int fprintf (FILE *fp,char *str,...);`
 
-#### desafio do exemplo 02
+##### desafio do exemplo 02
 
 Se o número for par, imprimir "par"
 
-### fgetc
+#### fgetc
 
 Lê o caractere presente na posição atual do fluxo interno. Após a leitura, a posição atual é avançada para o próximo caractere.
 
@@ -88,7 +90,7 @@ Lê o caractere presente na posição atual do fluxo interno. Após a leitura, a
 
 > extremamente lento
 
-#### desafio do exemplo 04
+##### desafio do exemplo 04
 
 se tiver um a minúsculo, trocar por um X
 
@@ -104,13 +106,13 @@ TODO
 
 02/03
 
-### fgets
+#### fgets
 
 `<adicionar a descrição>`
 
 `int fgetc (FILE * fp);`
 
-### strtok
+#### strtok
 
 `<adicionar a descrição>`
 
@@ -122,9 +124,9 @@ TODO
 > BOA QUESTÃO PARA PROVA
 > como faz um programa que conta quantas vezes uma palavra aparece num texto?
 
-# 02/03 - 02 Tipos de alocação de memória. Representação dos dados. Listas. Pilhas. Filas.
+## 02/03 - 02 Tipos de alocação de memória. Representação dos dados. Listas. Pilhas. Filas.
 
-## Tipos de dados
+### Tipos de dados
 
 Dados primitivos: tipo de dado vinculado a uma determinada variável.
 
@@ -135,7 +137,7 @@ dados compostos homogêneos são estruturas de vários dados de um mesmo tipo (v
 
 dados compostos heterogêneos: conjuntos de dados formados por tupos de dados primitidos diferentes organizados em uma mesma estrutura
 
-## Resgistros / Structures
+### Resgistros / Structures
 
 Todo vetor é um ponteiro, daí posso atribuir um vetor a um ponteiro.
 Atribuir uma variável a um ponteiro, dará erro, pois a variável armazena o seu endereço e o seu valor.
@@ -144,9 +146,9 @@ Atribuir uma variável a um ponteiro, dará erro, pois a variável armazena o se
 
 Variável tem endereço e dado
 
-## Arquivos Binários
+### Arquivos Binários
 
-### fwrite
+#### fwrite
 
 Escrever em arquivos binários
 
@@ -158,7 +160,7 @@ size_t fwrite(
   FILE * arquivo);
 ```
 
-### fread
+#### fread
 
 Escrever em arquivos binários
 
@@ -179,7 +181,7 @@ PROVA: qual a vantagem de escrever em arq bin?
 mat[5] == p*(mat+5)
 
 
-## Alocação dinâmica
+### Alocação dinâmica
  Alocação em tempo de execução 
 
  malloc
