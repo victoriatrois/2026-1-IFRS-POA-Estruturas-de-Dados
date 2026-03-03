@@ -2,20 +2,20 @@
 #include <string.h>
 
 typedef struct {
-	char nome[20];
-	int idade;
+  char nome[20];
+  int idade;
 } Cpessoa;
 
 int main(void) {
-	char condicao = 's';
-	Cpessoa aluno;
-	FILE *bin;
+  char condicao = 's';
+  Cpessoa aluno;
+  FILE *bin;
 
-	if((bin = fopen("arquivo_binario.txt","ab")) == NULL) {
+  if((bin = fopen("arquivo_binario.txt","ab")) == NULL) {
     printf("Erro ao abrir arquivo");
 
   } else {
-		while (condicao == 's' || condicao == 'S') {
+    while (condicao == 's' || condicao == 'S') {
       printf("Informe o nome:"); 
       scanf("%s", aluno.nome);
     
