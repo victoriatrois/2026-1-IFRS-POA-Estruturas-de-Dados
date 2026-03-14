@@ -37,4 +37,3 @@ int main(void) {
   printf("\nAcessos ao Array: %d\n", Cont); 
   return 0;
 }
-
