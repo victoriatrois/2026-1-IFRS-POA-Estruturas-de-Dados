@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 int main() {
-int i;
-unsigned int numAleatorio;
-
+  int i;
+  unsigned int numAleatorio;
+  
   FILE *txt;
 
   // substitui o arquivo, caso exista

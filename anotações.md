@@ -86,7 +86,9 @@ Se o número for par, imprimir "par"
 
 Lê o caractere presente na posição atual do fluxo interno. Após a leitura, a posição atual é avançada para o próximo caractere.
 
-`int fgetc (FILE * fp);`
+```c
+int fgetc (FILE * fp);
+```
 
 > extremamente lento
 
@@ -104,19 +106,77 @@ TODO
 [x] Atividade 03
 [x] Atividade 04
 
-02/03
+## 02/03
 
 #### fgets
 
-`<adicionar a descrição>`
+- lê caracteres até
+  - encontrar o \n, que é incluído na string
+  - ler o tamanho máximo informado menos 1
+  - chegar até o fim do arquivo
+- retorna um ponteiro de char em caso de sucesso
+- retorna NULL em caso de esso ou fim do arquivo
 
-`int fgetc (FILE * fp);`
+```c
+// sintaxe
+char * fgets(char * string, int tamanho, FILE * fluxo);
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char linha[1024]; 
+  FILE *txt = fopen("arquivo_texto.txt","r")
+  if(txt == NULL) {
+    printf("Erro ao abrir arquivo");
+  } else {
+    while (!feof(txt)) {
+      fgets(linha, 1024, txt);
+      printf("%s", linha);
+    }
+    fclose(txt);
+  }
+  return 1;
+  }
+```
+
+> ao contrário de scanf("%s"), o fgets lê espaços em branco e preserva a quebra de linha no final da string.
 
 #### strtok
 
-`<adicionar a descrição>`
+- divide uma string em tokens (partes menores) com base no delimitador informado.
 
-`<adicionar a sintaxe>`
+```c
+// sintaxe
+char *strtok(char *str, const char *delim);
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char linha[1024]; 
+  char * ultima;
+  FILE *txt = fopen("c:\\arquivo.txt","r");
+
+  if(txt == NULL) {
+    printf("Erro ao abrir arquivo");
+  } else {
+    while (!feof(txt)) {
+      fgets(linha, 1024, txt);
+      ultima = strtok (linha, " ");
+
+      while (ultima != NULL) {
+        printf ("%s ",ultima);
+        ultima = strtok (NULL, " ");
+      }
+    }
+
+    fclose(txt);
+  }
+  return 1;
+}
+```
 
 > Qual o tamanho indicado? para a linha
 > 4K
@@ -147,12 +207,17 @@ Estruturas formadas por dados de tipos diferentes, como structures com membros d
 
 São estruturas de dados de um mesmo tipo, como vetores, matrizes e structures com membros do mesmo tipo.
 
+Todo vetor é um ponteiro, daí posso:
+
+- atribuir um vetor a um ponteiro
+- 
+
+
 ###### Structures, Structs ou Resgistros
 
 Uma structure 
 
 TODO: ver onde cabe
-> Todo vetor é um ponteiro, daí posso atribuir um vetor a um ponteiro.
 > Atribuir uma variável a um ponteiro, dará erro, pois a variável armazena o seu endereço e o seu valor.
 > & é utilizado pra 
 > Variável tem endereço e dado
