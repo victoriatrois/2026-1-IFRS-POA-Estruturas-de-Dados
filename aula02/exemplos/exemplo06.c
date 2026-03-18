@@ -13,24 +13,21 @@ int main(void) {
 
   if((bin = fopen("arquivo_binario.txt","ab")) == NULL) {
     printf("Erro ao abrir arquivo");
+  }
 
-  } else {
-    while (condicao == 's' || condicao == 'S') {
-      printf("Informe o nome:"); 
-      scanf("%s", aluno.nome);
+  while (condicao == 's' || condicao == 'S') {
+    printf("Informe o nome:"); 
+    scanf("%s", aluno.nome);
+  
+    printf("Informe a idade:"); 
+    scanf("%d", &aluno.idade);
+    getchar();
     
-      printf("Informe a idade:"); 
-      scanf("%d", &aluno.idade);
-      getchar();
-      
-      printf("Continuar S/N?:"); 
-
-      // método usado para escrever em arquivos co modo de escrita "<mod_base>b"
-      fwrite(&aluno, 1, sizeof(aluno), bin);
-      
-      fflush(stdin);
-      scanf("%c", &condicao);
-    }
+    // método usado para escrever em arquivos co modo de escrita "<modo_base>b"
+    fwrite(&aluno, 1, sizeof(aluno), bin);
+    
+    printf("Continuar S/N?:"); 
+    scanf("%c", &condicao);
   }
 }
 

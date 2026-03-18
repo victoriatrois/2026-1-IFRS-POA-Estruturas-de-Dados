@@ -25,7 +25,6 @@ int main(void) {
 
   strcpy(paluno->nome, "Lucas Barroso");
   paluno->idade = 24;
-  paluno++;
 
   paluno = aluno;
 
