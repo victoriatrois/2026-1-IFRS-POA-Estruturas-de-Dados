@@ -432,3 +432,45 @@ int main() {
   return(0);
 }
 ```
+
+## 09/03 - 04 Algoritmos de ordenação
+
+Busca sequencial (O(n) - um acesso por elemento do conjunto), busca binária, busca por interpolação, busca em árvore, Hashing ou tabela de dispersão (O(1) - um acesso por busca)
+
+> Busca por árvore é mais rápida que a busca binária porque a inserção é mais rápida
+
+## 16/03 - 04 Algoritmos de ordenação
+
+Exercícios de recursividade - folhinha
+
+```c
+int ff(int n) {
+  if (n==0) {
+    return 1;
+  }  else {
+    return ff(n - 1);
+    print(“%d”, n);
+  }
+}
+
+int main(void) {
+  print(“%d”, ff(4));
+}
+```
+
+Pesquisas eficientes exigem dados ordenados (ganho de velocidade no acesso)
+Ordenar dados exige processamento extra (desvantagem)
+
+A ordenação é feita pelo índice não pelos dados em sim.
+
+Algoritmos de ordenação podem ser estáveis e não estáveis (instáveis?)
+
+Algoritmos estáveis não realizam trocas, caso os dados já estejam ordenados. Algoritmos instáveis realizam trocas desnecessárias.
+
+Algoritmos famosos:
+Bubblesort
+Ordenação por contagem
+Ordenação por inserção
+Mergesort
+Quicksort
+Ordenação por seleção
