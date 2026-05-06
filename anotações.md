@@ -474,3 +474,23 @@ Ordenação por inserção
 Mergesort
 Quicksort
 Ordenação por seleção
+
+## 04/05 - 04 Algoritmos de ordenação
+
+Três algoritmos acadêmicos que tem propósito pedagógico.
+
+CountSort - tempo linear - conta quantas vezes um elemento ocorre num conjunto, depois imprime os números na ordem certa.
+O(n)
+
+O problema desse algoritmo é a alocação de memória.
+
+MergeSort - algoritmo hierárquico - dividir para conquistar
+(O(nlog2n))
+
+O problema do mergesort é que ele faz muitas chamadas recursivas e estoura pilha com facilidade.
+
+QuickSort - o método mais rápido na maioria dos casos
+O(n2) (melhor) O(n log n) (pior)
+Ele faz uso de particionamento usando recursividade ou iteratividade.
+
+Particionar é escolher um número qualquer, o deverminar como pivot e fazer subdivisões nas partes subsequentes.
