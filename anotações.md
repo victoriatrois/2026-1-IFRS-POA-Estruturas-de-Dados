@@ -494,3 +494,17 @@ O(n2) (melhor) O(n log n) (pior)
 Ele faz uso de particionamento usando recursividade ou iteratividade.
 
 Particionar é escolher um número qualquer, o deverminar como pivot e fazer subdivisões nas partes subsequentes.
+
+## 11/05 - Árvores
+
+Caminho é sequência única de nós para se chegar n1 a nk
+
+O comprimento é a quantidade de arestas do maior caminho (ignorando a raiz)
+
+A altura é o número de nós do maior caminho (considerando a raiz)
+
+Cada nó de uma árvore binária, pode ter dois filhos.
+Filhos menores que a raiz, à esquerda, maiores à direita.
+
+Log de n = diminui de forma exponencial
+
